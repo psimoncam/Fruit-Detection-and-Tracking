@@ -2,7 +2,7 @@ from email.policy import default
 import numpy as np
 import cv2
 import sys
-from yolov5.detect_pol_v2 import yolo_detector
+from yolov5.detect_modified import yolo_detector
 from deepsort_lab.deepsort import *
 
 from base64 import b64encode
@@ -15,7 +15,7 @@ import argparse
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', nargs='+', type=str, default='./yolov5/runs/train/ENTRENO7/weights/best.pt', help='model path(s)')
+    parser.add_argument('--weights', nargs='+', type=str, default='./yolov5/weights/best_train7.pt', help='model path(s)')
     parser.add_argument('--source', type=str, default='./tmp/', help='file/dir/URL/glob, 0 for webcam')
     parser.add_argument('--data', type=str, default='./yolov5/data/coco128.yaml', help='(optional) dataset.yaml path')
     parser.add_argument('--video', type=str, default=None, help='path to the video file')
