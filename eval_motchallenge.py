@@ -177,12 +177,16 @@ def main():
             print("{} objects with {} ID migrations".format(quantity_oids, num_migrations))
         
         print("\nIDs per track")
-        for num_ids, quantity_tracks in ids_per_track.items():
-            print("{} tracks with {} different object ids".format(quantity_tracks, num_ids))
+        with open("ids_per_track.txt", "a") as f:
+            for num_ids, quantity_tracks in ids_per_track.items():
+                f.write(str(num_ids) + "," + str(quantity_tracks) + "\n")
+                print("{} tracks with {} different object ids".format(quantity_tracks, num_ids))
             
         print("\nTracks per object ID")
-        for num_tracks, quantity_oids in tracks_per_id.items():
-            print("{} objects with {} different tracks".format(quantity_oids, num_tracks))
+        with open("tracks_per_id.txt", "a") as f:
+            for num_tracks, quantity_oids in tracks_per_id.items():
+                f.write(str(num_tracks) + "," + str(quantity_oids) + "\n")
+                print("{} objects with {} different tracks".format(quantity_oids, num_tracks))
             
     logging.info('Completed')
 
