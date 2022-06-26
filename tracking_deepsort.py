@@ -32,6 +32,7 @@ def parse_opt():
     parser.add_argument('--max_iou_distance', type=float, default=0.7, help='max iou distance to perform tracking')
     parser.add_argument('--n_init', type=int, default=3, help='Number of frames that a track remains in initialization phase')
     parser.add_argument('--enlarge', default=False, action='store_true', help='enlarge bounding boxes or not')
+    parser.add_argument('--save', default=False, action='store_true', help='save results for future metrics evaluation')
     opt = parser.parse_args()
     opt.imgsz *= 2 if len(opt.imgsz) == 1 else 1  # expand
     #print_args(vars(opt))
@@ -178,8 +179,13 @@ if __name__ == '__main__':
     # When everything done, release the capture
     writer.release()
     
-    #with open(os.path.join("/home/usuaris/imatge/pol.simon/apple_detection/test_9476/", os.path.split(video_file)[-1].replace(".mp4", ".txt")), 'w') as test_file:
-    #    test_file.write("\n".join(lines))
+    if opt.save:
+        dst = r"./results"
+        if not os.path.exists(dst):
+            os.makedirs(dst)
+        output_file = os.path.join(dst, os.path.split(video_file)[-1].replace(".mp4", ".txt"))
+        with open(output_file, 'w') as test_file:
+            test_file.write("\n".join(lines))
     
     print("\n---------FINISHED---------")
     print("Pomes totals:", pomes_totals)
