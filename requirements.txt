@@ -26,7 +26,7 @@ kiwisolver
 Markdown
 matplotlib
 mock
-motmetrics @ git+https://github.com/psimoncam/motmetrics_adaptation.git@417f94ab6d5cc186e8fbc7c71c4de24622c91f32
+motmetrics @ git+https://github.com/psimoncam/motmetrics_adaptation.git
 numpy
 oauthlib
 opencv-contrib-python
