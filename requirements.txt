@@ -33,7 +33,7 @@ opencv-contrib-python
 opt-einsum
 pandas
 Pillow
-pkg_resources
+#pkg_resources
 protobuf
 pyasn1
 pyasn1-modules
@@ -49,11 +49,11 @@ scipy
 seaborn
 six
 sklearn
-tensorboard
-tensorboard-data-server
-tensorboard-plugin-wit
-tensorflow-estimator
-tensorflow-gpu
+#tensorboard
+#tensorboard-data-server
+#tensorboard-plugin-wit
+#tensorflow-estimator
+#tensorflow-gpu
 termcolor
 threadpoolctl
 torch
