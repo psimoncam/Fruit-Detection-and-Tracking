@@ -9,7 +9,7 @@ width = 1080
 height = 1920
 
 dicc_obj = {}
-poma = 1547
+poma = 0
 with open(r"/home/usuaris/imatge/pol.simon/apple_detection/videos/210928_165030_k_r2_w_015_125_162/ds0/ann/210928_165030_k_r2_w_015_125_162.mp4.json", 'r') as json_file:
  data = json.load(json_file)
 for frame in data["frames"]:
@@ -23,13 +23,13 @@ for frame in data["frames"]:
      dicc_obj[objectKey] = poma
      poma += 1
      
-   # Videos Camera Z
+   # Videos Camera Z (orientacio correcta)
    #xmin = figura["geometry"]["points"]["exterior"][0][0]
    #ymin = figura["geometry"]["points"]["exterior"][0][1]
    #xmax = figura["geometry"]["points"]["exterior"][1][0]
    #ymax = figura["geometry"]["points"]["exterior"][1][1]
    
-   # Videos Camera K
+   # Videos Camera K (rotats a la dreta)
    #img = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
    #cv2.imwrite("rotated_frame%04d.jpg" % index, img)
    xmin = figura["geometry"]["points"]["exterior"][0][1]
@@ -40,9 +40,3 @@ for frame in data["frames"]:
    # cv2_imshow(cropped_image)
    cv2.imwrite(os.path.join(r"/home/usuaris/imatge/pol.simon/apple_detection/videos/210928_165030_k_r2_w_015_125_162/ds0/cropped_objects_vid6/", "video_6_frame_%04d_objecte_%04d.jpg" % (index, dicc_obj[objectKey])), cropped_image)
 print(poma)
-
-#dst = r"/home/usuaris/imatge/pol.simon/apple_detection/videos/crops/"
-#imgs = glob.glob(os.path.join(dst, "*.jpg"))
-#for img in imgs:
-#    if "objecte_0424" in img or "objecte_0425" in img or "objecte_0426" in img or "objecte_0427" in img:
-#        print(os.path.split(img)[-1])
