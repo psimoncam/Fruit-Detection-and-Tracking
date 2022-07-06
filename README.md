@@ -10,12 +10,7 @@ The repository contains a Google Colab notebook which shows the procedure to run
 pip install -r requirements.txt
 ```
 
-With this you are already able to track your own video. If you have the ground truth annotations and want to obtain some metrics, you can use any kind of evaluating method. During my project, I used an [adaptation][my py-motmetrics] of the py-motmetrics [original repository][py-motmetrics].
-To install it, run:
-
-```
-pip install git+https://github.com/psimoncam/motmetrics_adaptation
-```
+With this you are already able to track your own video. If you have the ground truth annotations and want to obtain some metrics, you can use any kind of evaluating method. During my project, I used an [adaptation][my py-motmetrics] of the py-motmetrics [original repository][py-motmetrics]. The requirements.txt file already includes the installation of this adaptation.
 
 [my py-motmetrics]: https://github.com/psimoncam/motmetrics_adaptation
 [py-motmetrics]: https://github.com/cheind/py-motmetrics
