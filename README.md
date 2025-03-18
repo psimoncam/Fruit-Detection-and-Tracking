@@ -14,3 +14,8 @@ With this you are already able to track your own video. If you have the ground t
 
 [my py-motmetrics]: https://github.com/psimoncam/motmetrics_adaptation
 [py-motmetrics]: https://github.com/cheind/py-motmetrics
+
+## Example video tracked
+
+https://github.com/user-attachments/assets/3d07626d-1873-4b3b-8927-d8a97dfdf126
+
